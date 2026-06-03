@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #050816, #1b0f3a, #30115e, #0f3460);
+}
+
+/* BARRE DE NAVIGATION */
+.navbar {
+  width: 100%;
+  padding: 22px 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(5, 8, 22, 0.85);
+  border-bottom: 1px solid white;
+}
+
+.navbar h2 {
+  color: white;
+  letter-spacing: 2px;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 35px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #9d4edd;
+}
+
+/* BANNIÈRE */
+.banner {
+  height: 320px;
+  margin: 40px auto;
+  width: 90%;
+  border: 1px solid white;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Ici tu pourras mettre ton image de bannière */
+  background: linear-gradient(rgba(5,8,22,0.4), rgba(5,8,22,0.7)),
+              url("img/banniere.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.banner-content {
+  text-align: center;
+}
+
+.banner h1 {
+  font-size: 60px;
+  margin-bottom: 15px;
+}
+
+.banner p {
+  font-size: 22px;
+}
+
+/* CARTES */
+.domaines {
+  width: 90%;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.carte {
+  border: 1px solid white;
+  border-radius: 22px;
+  padding: 18px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.image-zone {
+  height: 180px;
+  border: 1px solid white;
+  border-radius: 18px;
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ddd;
+
+  /* Exemple pour mettre une image plus tard */
+  background-size: cover;
+  background-position: center;
+}
+
+.carte h3 {
+  font-size: 22px;
+}
