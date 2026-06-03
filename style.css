@@ -12,7 +12,20 @@ body {
 }
 
 /* BARRE DE NAVIGATION */
+.navbar nav {
+  display: flex;
+  gap: 35px;
+}
 
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #60a5fa;
+}
 .navbar{
     position:fixed;
 
