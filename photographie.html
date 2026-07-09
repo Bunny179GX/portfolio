@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photographie | Loïc Gex</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+
+<header class="navbar">
+    <div class="logo">LOÏC GEX</div>
+
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="qui-suis-je.html">Qui suis-je ?</a>
+        <a href="index.html#domaines">Travaux</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="page-hero photo-hero">
+    <h1>Photographie</h1>
+</section>
+
+<section class="intro-photo">
+    <div class="intro-image">
+        <img src="img/photo-intro.jpg" alt="Présentation photographie">
+    </div>
+
+    <div class="intro-text">
+        <h2>Mon univers photo</h2>
+        <p>
+            À travers mes photos, je cherche à capturer des instants, des émotions
+            et des ambiances uniques. Cette page regroupe mes projets photographiques :
+            portraits, sport, paysages, animaux et moments de vie.
+        </p>
+    </div>
+</section>
+
+<section class="galerie-section">
+    <h2>Galerie</h2>
+
+    <div class="galerie-grid">
+        <img src="img/photo1.jpg" alt="Photo 1">
+        <img src="img/photo2.jpg" alt="Photo 2">
+        <img src="img/photo3.jpg" alt="Photo 3">
+        <img src="img/photo4.jpg" alt="Photo 4">
+        <img src="img/photo5.jpg" alt="Photo 5">
+        <img src="img/photo6.jpg" alt="Photo 6">
+    </div>
+</section>
+
+<div class="lightbox" id="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="">
+</div>
+
+<a href="#top" class="back-top">↑</a>
+
+<script>
+    const images = document.querySelectorAll('.galerie-grid img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const close = document.querySelector('.close');
+
+    images.forEach(image => {
+        image.addEventListener('click', () => {
+            lightbox.style.display = 'flex';
+            lightboxImg.src = image.src;
+        });
+    });
+
+    close.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+    });
+
+    lightbox.addEventListener('click', (e) => {
+        if (e.target !== lightboxImg) {
+            lightbox.style.display = 'none';
+        }
+    });
+</script>
+
+</body>
+</html>
